@@ -1,0 +1,24 @@
+
+.footer{
+    background-color: rgb(90, 87, 87);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.logo{
+    width: 150px;
+    height: auto;
+}
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}

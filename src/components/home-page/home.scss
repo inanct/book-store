@@ -1,0 +1,15 @@
+
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+.carousel-item img {
+    width: 100rem;
+    height: 500px;
+    /* Ekran yüksekliği kadar olacak şekilde ayarlanır */
+    object-fit: cover;
+    /* Resmi boyutları koruyarak tam olarak sığdırır */
+}
