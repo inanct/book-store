@@ -4,6 +4,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import "./home.scss"
 
 import { Container, Image } from 'react-bootstrap';
+import CardPage from '../card-page';
+
 
 
 const Home = () => {
@@ -42,6 +44,8 @@ const Home = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    
+  
      </Container>
   );
 }
