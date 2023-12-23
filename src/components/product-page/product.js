@@ -1,7 +1,7 @@
-import React, { Component, useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import {API_URL} from "../../API";
 import axios from 'axios';
-import { Card, Carousel, Col, Container, Image, Row } from 'react-bootstrap';
+import { Card,  Container, Image,  } from 'react-bootstrap';
 import "./product.scss"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
@@ -68,10 +68,30 @@ const settings = {
       .filter((book) => book.rating >= 4.30)
       .map((book) => (
         
-          <Card style={{ width: '18rem' }}>
+          <Card key={book.key} style={{ width: '18rem' }}>
             <Image src={book.image_url} />
             <Card.Body>
-              <Card.Title className='title'>{book.rating}</Card.Title>
+              <Card.Title className='title'>{book.rating} rating</Card.Title>
+              <Card.Title className='title'>{book.title}</Card.Title>
+            </Card.Body>
+          </Card>
+        
+      ))}
+   
+    </Slider>
+
+    <h2>Classics </h2>
+
+     <Slider {...settings}>
+    {books
+      .filter((book) => book.genres >= "Classics")
+      .map((book) => (
+        
+          <Card >
+            <Image src={book.image_url} />
+            <Card.Body>
+              <Card.Title className='title'>{book.rating} rating</Card.Title>
+              <Card.Title className='title'>{book.title}</Card.Title>
             </Card.Body>
           </Card>
         

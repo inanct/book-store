@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import "./home.scss"
 
 import { Container, Image } from 'react-bootstrap';
-import CardPage from '../card-page';
+
 
 
 

@@ -17,7 +17,7 @@ const Header = () => {
       placement="end"
     >
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title id="offcanvasNavbarLabel">
+        <Offcanvas.Title className='logo' id="offcanvasNavbarLabel">
           BookStore
         </Offcanvas.Title>
       </Offcanvas.Header>
@@ -25,8 +25,8 @@ const Header = () => {
         <Nav className="justify-content-center flex-grow-1 pe-5 ">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="product">Products</Nav.Link>
-          <Nav.Link href="aboutUs">About Us</Nav.Link>
-          <Nav.Link href="contact">Contacts1</Nav.Link>
+          <Nav.Link href="about">About Us</Nav.Link>
+          <Nav.Link href="contact">Contact</Nav.Link>
        
         </Nav>
        
