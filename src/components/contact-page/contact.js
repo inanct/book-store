@@ -1,8 +1,10 @@
+import axios from 'axios';
 import { useFormik } from 'formik'
 import React from 'react'
 import { Button, Container, Form, FormControl, FormGroup, FormLabel } from 'react-bootstrap'
 import * as Yup from "yup";
 
+const BASE_URL = process.env.REACT_APP_API_URL
 
 const Contact = () => {
   const formik = useFormik({
@@ -20,8 +22,22 @@ const Contact = () => {
       password:Yup.string().min(6, "Sifre en az 6 karakter olmalidir").max(15, "Sifre en fazla 15 karakter olamalidir").required("Sifre kismi bos birakilamaz")
     }),
 
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.log(values)
+      const dto = {
+        firstName:values.firstName,
+        lastName:values.lastName,
+        email:values.email,
+        password:values.password
+      }
+     
+      try {
+        const response = await axios.post(`${BASE_URL}/project/bookapp`, dto)
+        alert (JSON.stringify(response.data));
+      } catch (error) {
+        alert("Error")
+        
+      }
     }
 
   })
